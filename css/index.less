@@ -1,0 +1,129 @@
+//main
+.main{
+	position: relative;
+	width:68.75em;
+	height:11em;
+	padding: 1.2em 2em;
+	border-left: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+	.left{
+		h2{
+			font-weight: bold;
+		}
+		span{
+			color:#3864a4;
+		}
+		.leftspan1{
+			margin-left: 45em;
+		}
+		.leftspan2{
+			margin-left: 62em;
+		}
+		.leftspan3{
+			margin-left: 70em;
+		}
+		li{
+			margin-left: 10em;
+			list-style-type: disc;
+			font-size: .10em;
+			line-height: 18em;
+			span{
+				text-align: right;
+			}
+		}
+	}
+	.middle{
+		h2{
+			font-weight: bold;
+		}
+		span{
+			color:#3864a4;
+		}
+		
+		.infolist{
+			position: relative;
+			input{
+			    display: none;
+			}
+			
+			input:checked + .info{
+			    opacity: 1;
+			    z-index:1;
+			
+			}
+			#info1:checked ~ .morebox label[for="info1"],#info2:checked ~ .morebox label[for="info2"],#info3:checked ~ .morebox label[for="info3"]{
+			    background-color:#5b82bc;
+			}
+			.info{
+			    position: absolute;
+			    top:0;
+			    width:100%;
+			    text-align: center;
+			    text-transform: uppercase;
+			    opacity: 0;
+			    z-index:-1;
+			
+			    transition:all linear .3s;
+			    
+			    .content{
+			        color:#000;
+			        font-family: OSBold;
+			        font-size:.8em;
+					img{
+						margin-left: -1.3em;
+					}
+					span{
+						font-size:1.2em;
+						color:#000;
+					}
+					.infospan{
+						
+					}
+					.infoimg{
+					padding-left: 4em;
+					}
+			    }
+			}
+			
+			
+			.morebox{
+				position: absolute;
+				bottom:0;
+				left:0;
+				margin-left: 10.4em;
+				margin-bottom: .4em;
+				.more{
+					label{
+					    display: inline-block;
+						text-align: center;
+						line-height: 1em;
+					    width:1em;
+					    height:1em;
+						border: 1px solid #ccc;
+					    background-color:#fff;
+					    cursor: pointer;
+					    transition:all linear .3s;
+					}
+					label:hover{
+					    background-color:#5b82bc;
+					}
+				}
+			}
+		}
+		
+		
+	}
+	.right{
+		cursor: pointer;
+		img{
+			box-shadow: 1px 1px 0px 1px #000;
+			transition:all linear .3s;
+		}
+		img:hover{
+			transform: rotateZ(5deg);
+		}
+		.right2{
+			margin-left: 0.5em;
+		}
+	}
+}
